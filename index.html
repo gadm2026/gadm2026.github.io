@@ -221,9 +221,8 @@
     <div class="columns is-centered mb-6">
       <div class="column">
         <p class="mb-2">
-          We validate our system in GPS-denied outdoor runs where robots face uneven terrain, 
-          frequent mutual occlusions, pedestrians, and moving objects, and illuminatio changes.
-          The demo videos highlight robustness under dynamic pedestrians and varying light conditions.
+          We validate our system through a downstream formation control task in GPS-denied outdoor environments, explicitly demonstrating the real-time applicability of GADM. Robots operate on uneven terrain with frequent mutual occlusions, dynamic pedestrians, moving obstacles, and varying illumination. The trained GADM model can run in real time at $\sim$10 Hz (trained model runs at $\sim$10 Hz standalone, but the full perception–control loop runs at $\sim$5 Hz) on an Intel i7-13620H CPU with an NVIDIA RTX~4050 GPU mounted on the B1 legged robot. To implement a leader-follower wedge formation, we set the B1 robot to serve as the leader, while the tracked Bunker and wheeled Jackal robots act as followers. Each follower robot (Jackal and Bunker) broadcasts its observations to the leader (B1), which estimates the relative poses using GADM. With synchronized RGB-D observations streamed to the remote node, B1 performs pairwise relative pose estimation via GADM and broadcasts the resulting estimates back to the follower robots. This configuration preserves a map-free design: no pre-built map, GPS, or infrastructure is required beyond standard time synchronization and sensor-to-base extrinsics calibration. By avoiding global mapping and relying solely on inter-robot observations, the system remains decentralized and agnostic to platform morphology, as long as extrinsics are known.
+The demo videos highlight robustness under dynamic pedestrians and varying light conditions.
         </p>
         <div class="columns is-variable is-1">
           <div class="column">
