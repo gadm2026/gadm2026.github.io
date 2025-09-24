@@ -244,6 +244,41 @@ The demo videos highlight robustness under dynamic pedestrians and varying light
       </div>
     </div>
     <!--/ Real World Section -->
+    <!-- Real World Section -->
+    <div class="columns is-centered mt-0 mb-0">
+      <div class="column">
+        <div class="content">
+          <h3 class="title is-4 has-text-centered">Real time GADM matching</h3>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered mb-6">
+      <div class="column">
+        <p class="mb-2">
+          We visualize real-time GADM feature matches used during formation control. 
+          The first row shows the matching results between the leader (B1) and follower 1 (Bunker), while the second row corresponds to B1 and follower 2 (Jackal). 
+          White lines indicate all final matches from model, and green lines indicate the inlier correspondences retained by the 3D pose estimation module.
+        </p>
+        <div class="columns is-variable is-1">
+          <div class="column">
+            <video autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/outdoor_bridge_matches.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="column">
+            <video autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/outdoor_bridge_turn_matches.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="column">
+            <video autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/outdoor_lawn_matches.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Real World Section -->
 
 
 </body>
